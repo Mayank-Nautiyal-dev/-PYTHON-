@@ -1,0 +1,22 @@
+[app]
+name = "GridGuard AI"
+environment = "development"
+
+[simulation]
+engine = "veragrid"
+contingency_interval_minutes = 60
+
+[forecast]
+model = "lstm"
+window_size = 24
+horizon = 12
+
+[risk]
+overload_threshold = 0.9
+high_risk_threshold = 0.75
+
+[database]
+url = "postgresql+psycopg2://gridguard:gridguard@localhost:5432/gridguard"
+
+[redis]
+url = "redis://localhost:6379/0"
